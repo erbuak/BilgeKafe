@@ -32,7 +32,7 @@ namespace BilgeKafe.UI
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.ürünlerToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.geçmişSiparişlerToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.lvwMasalar = new System.Windows.Forms.ListView();
+            this.lvMasalar = new System.Windows.Forms.ListView();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -52,35 +52,41 @@ namespace BilgeKafe.UI
             this.ürünlerToolStripMenuItem.Name = "ürünlerToolStripMenuItem";
             this.ürünlerToolStripMenuItem.Size = new System.Drawing.Size(58, 20);
             this.ürünlerToolStripMenuItem.Text = "Ürünler";
+            this.ürünlerToolStripMenuItem.Click += new System.EventHandler(this.ürünlerToolStripMenuItem_Click);
             // 
             // geçmişSiparişlerToolStripMenuItem
             // 
             this.geçmişSiparişlerToolStripMenuItem.Name = "geçmişSiparişlerToolStripMenuItem";
             this.geçmişSiparişlerToolStripMenuItem.Size = new System.Drawing.Size(108, 20);
             this.geçmişSiparişlerToolStripMenuItem.Text = "Geçmiş Siparişler";
+            this.geçmişSiparişlerToolStripMenuItem.Click += new System.EventHandler(this.geçmişSiparişlerToolStripMenuItem_Click);
             // 
-            // lvwMasalar
+            // lvMasalar
             // 
-            this.lvwMasalar.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.lvMasalar.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.lvwMasalar.HideSelection = false;
-            this.lvwMasalar.Location = new System.Drawing.Point(12, 27);
-            this.lvwMasalar.Name = "lvwMasalar";
-            this.lvwMasalar.Size = new System.Drawing.Size(776, 492);
-            this.lvwMasalar.TabIndex = 1;
-            this.lvwMasalar.UseCompatibleStateImageBehavior = false;
+            this.lvMasalar.HideSelection = false;
+            this.lvMasalar.Location = new System.Drawing.Point(12, 27);
+            this.lvMasalar.Name = "lvMasalar";
+            this.lvMasalar.Size = new System.Drawing.Size(776, 492);
+            this.lvMasalar.TabIndex = 1;
+            this.lvMasalar.UseCompatibleStateImageBehavior = false;
+            this.lvMasalar.DoubleClick += new System.EventHandler(this.lvMasalar_DoubleClick);
             // 
             // AnaForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 531);
-            this.Controls.Add(this.lvwMasalar);
+            this.Controls.Add(this.lvMasalar);
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
+            this.MinimumSize = new System.Drawing.Size(816, 570);
             this.Name = "AnaForm";
-            this.Text = "AnaForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Bilge Kafe";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.AnaForm_FormClosing);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
@@ -93,6 +99,6 @@ namespace BilgeKafe.UI
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem ürünlerToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem geçmişSiparişlerToolStripMenuItem;
-        private System.Windows.Forms.ListView lvwMasalar;
+        private System.Windows.Forms.ListView lvMasalar;
     }
 }
